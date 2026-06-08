@@ -90,9 +90,3 @@ public/
 ## UI Inspiration
 
 Big thanks to **[8bitcn](https://www.8bitcn.com)** for the 8-bit UI design system that inspired Spark's visual style — chunky pixel borders, hard shadows, retro progress bars, and the ogre on the 404 page.
-
----
-
-## License
-
-MIT
