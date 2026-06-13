@@ -4,9 +4,10 @@ import TopicScreen from "./components/TopicScreen";
 import QuestionScreen from "./components/QuestionScreen";
 import ResultsScreen from "./components/ResultsScreen";
 import NotFoundScreen from "./components/NotFoundScreen";
+import BrewingScreen from "./components/BrewingScreen";
 import "./App.css";
 
-// screens: "setup" | "topic" | "game" | "results" | "404"
+// screens: "setup" | "topic" | "brewing" | "game" | "results" | "404"
 
 const VALID_PATHS = ["/"];
 
@@ -29,7 +30,7 @@ export default function App() {
 
   function handleTopicPick(cat) {
     setCategory(cat);
-    setScreen("game");
+    setScreen("brewing");
   }
 
   function handleEndGame(state) {
@@ -53,6 +54,9 @@ export default function App() {
     <div className="app-shell">
       {screen === "setup" && (
         <PlayerSetup onStart={handleSetupDone} />
+      )}
+      {screen === "brewing" && (
+        <BrewingScreen onDone={() => setScreen("game")} />
       )}
       {screen === "topic" && (
         <TopicScreen

@@ -401,8 +401,13 @@ body {
 }
 .input-count::-webkit-outer-spin-button,
 .input-count::-webkit-inner-spin-button { -webkit-appearance: none; }
-.input-count.active,
 .input-count:focus { box-shadow: 4px 4px 0px var(--border); }
+.input-count.active {
+  background: var(--border);
+  color: var(--bg);
+  box-shadow: 4px 4px 0px #555;
+}
+.input-count.active::placeholder { color: #888; }
 
 .cap-warning {
   font-size: 0.45rem;

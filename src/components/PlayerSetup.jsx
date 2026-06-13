@@ -11,28 +11,37 @@ export default function PlayerSetup({ onStart }) {
 
   const activeCount = useCustom ? names.length : count;
 
+  function resizeNames(n) {
+    setNames((prev) => Array.from({ length: n }, (_, i) => prev[i] ?? ""));
+  }
+
   function handleCountSelect(n) {
     setUseCustom(false);
+    setCustom("");
     setCount(n);
-    setNames((prev) => {
-      const next = Array.from({ length: n }, (_, i) => prev[i] ?? "");
-      return next;
-    });
+    resizeNames(n);
   }
 
   function handleCustomChange(val) {
-    // allow free typing — only update display value, don't clamp yet
     setCustom(val);
+    const n = parseInt(val);
+    if (!isNaN(n) && n >= 2) {
+      resizeNames(Math.min(n, MAX_PLAYERS));
+    }
+  }
+
+  function handleCustomFocus() {
+    setUseCustom(true);
   }
 
   function handleCustomBlur() {
     const n = Math.max(2, Math.min(MAX_PLAYERS, parseInt(custom) || 2));
     setCustom(String(n));
-    setNames((prev) => Array.from({ length: n }, (_, i) => prev[i] ?? ""));
+    resizeNames(n);
   }
 
   function handleName(i, val) {
-    setNames((prev) => prev.map((n, idx) => (idx === i ? val : n)));
+    setNames((prev) => prev.map((name, idx) => (idx === i ? val : name)));
   }
 
   function handleStart() {
@@ -69,7 +78,7 @@ export default function PlayerSetup({ onStart }) {
             max={MAX_PLAYERS}
             placeholder="?"
             value={custom}
-            onFocus={() => { setUseCustom(true); }}
+            onFocus={handleCustomFocus}
             onChange={(e) => handleCustomChange(e.target.value)}
             onBlur={handleCustomBlur}
           />
@@ -97,7 +106,7 @@ export default function PlayerSetup({ onStart }) {
       </div>
 
       <button className="btn-primary" onClick={handleStart}>
-        Start &gt;
+        {names.slice(0, activeCount).every((n) => n.trim()) ? "Start" : "Skip"} &gt;
       </button>
     </div>
   );

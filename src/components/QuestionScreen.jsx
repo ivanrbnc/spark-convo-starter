@@ -1,6 +1,5 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getRandomQuestion } from "../data/questions";
-import BrewingScreen from "./BrewingScreen";
 
 const DEFAULT_DURATION = 30;
 const ADD_TIME = 15;
@@ -26,22 +25,16 @@ export default function QuestionScreen({
     initFromResume ? resumeState.currentPlayerIdx : 0
   );
 
-  const [brewing, setBrewing] = useState(true); // show cauldron on first load too
   const [current, setCurrent] = useState(null);
-  // playerTimes for the current question: { playerId: secondsUsed }
   const [playerTimes, setPlayerTimes] = useState({});
 
   const [timeLeft, setTimeLeft] = useState(DEFAULT_DURATION);
   const [paused, setPaused] = useState(false);
   const [expired, setExpired] = useState(false);
 
-  // track time elapsed this turn for accurate "time used" even on add
   const turnStartTimeRef = useRef(null);
   const elapsedBeforeAddRef = useRef(0);
-  const maxTimeRef = useRef(DEFAULT_DURATION); // tracks ceiling for progress bar
-
-  // pendingLoad holds args for loadQuestion until brewing finishes
-  const pendingLoadRef = useRef(null);
+  const maxTimeRef = useRef(DEFAULT_DURATION);
 
   function loadQuestion(indices, playerIdx) {
     const result = getRandomQuestion(category.id, indices);
@@ -58,23 +51,11 @@ export default function QuestionScreen({
     setCurrentPlayerIdx(playerIdx);
   }
 
-  function triggerBrew(indices, playerIdx) {
-    pendingLoadRef.current = { indices, playerIdx };
-    setBrewing(true);
-  }
-
-  function handleBrewDone() {
-    const { indices, playerIdx } = pendingLoadRef.current ?? { indices: usedIndices, playerIdx: currentPlayerIdx };
-    loadQuestion(indices, playerIdx);
-    setBrewing(false);
-  }
-
   useEffect(() => {
-    // set pending for initial load, brewing=true already
-    pendingLoadRef.current = {
-      indices: initFromResume ? resumeState.usedIndices : [],
-      playerIdx: currentPlayerIdx,
-    };
+    loadQuestion(
+      initFromResume ? resumeState.usedIndices : [],
+      currentPlayerIdx
+    );
   }, []);
 
   // countdown
@@ -96,7 +77,7 @@ export default function QuestionScreen({
     turnStartTimeRef.current = Date.now();
     setTimeLeft((t) => {
       const next = t + ADD_TIME;
-      maxTimeRef.current = next; // update ceiling so bar stays within bounds
+      maxTimeRef.current = next;
       return next;
     });
     setExpired(false);
@@ -105,25 +86,16 @@ export default function QuestionScreen({
   function handleDone() {
     const secondsUsed = expired ? DEFAULT_DURATION : getSecondsUsedThisTurn();
     const player = players[currentPlayerIdx];
-
     const updatedTimes = { ...playerTimes, [player.id]: secondsUsed };
     setPlayerTimes(updatedTimes);
 
     const nextIdx = (currentPlayerIdx + 1) % players.length;
-
-    // if we've gone full circle → log the question and start fresh
-    if (nextIdx === 0 || nextIdx <= currentPlayerIdx && nextIdx === 0) {
-      // always true when wrapping: nextIdx === 0 after last player
-    }
-
-    // check if next player is back to start (full round done for this question)
     const isRoundDone = nextIdx === 0;
 
     if (isRoundDone) {
       setLog((prev) => [...prev, { question: current.question, playerTimes: updatedTimes }]);
-      triggerBrew(usedIndices, 0);
+      loadQuestion(usedIndices, 0);
     } else {
-      // next player's turn on same question
       setCurrentPlayerIdx(nextIdx);
       setTimeLeft(DEFAULT_DURATION);
       setPaused(false);
@@ -135,7 +107,6 @@ export default function QuestionScreen({
   }
 
   function handleEndGame() {
-    // record current partial question (only players who already went)
     const player = players[currentPlayerIdx];
     const secondsUsed = expired ? DEFAULT_DURATION : getSecondsUsedThisTurn();
     const finalTimes = { ...playerTimes, [player.id]: secondsUsed };
@@ -154,10 +125,6 @@ export default function QuestionScreen({
     timeLeft > DEFAULT_DURATION * 0.5 ? "#1a1a1a" :
     timeLeft > DEFAULT_DURATION * 0.25 ? "#c47f00" : "#c0392b";
 
-  if (brewing) {
-    return <BrewingScreen onDone={handleBrewDone} />;
-  }
-
   return (
     <div className="question-screen">
       <div className="qs-header">
@@ -168,7 +135,6 @@ export default function QuestionScreen({
         <button className="btn-end" onClick={handleEndGame}>End game</button>
       </div>
 
-      {/* player turn indicators */}
       <div className="player-track">
         {players.map((p, i) => (
           <div
