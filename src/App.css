@@ -100,6 +100,16 @@ body {
   box-shadow: 2px 2px 0px var(--border);
 }
 
+.category-card.active {
+  background: var(--border);
+  color: #fff;
+  box-shadow: 4px 4px 0px #555;
+}
+
+.category-card.active .cat-label {
+  color: #fff;
+}
+
 .cat-emoji { font-size: 1.4rem; font-family: sans-serif; }
 
 .cat-label {
@@ -294,6 +304,12 @@ body {
 
 .btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #555; }
 .btn-primary:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px #555; }
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--shadow);
+}
 
 /* ── End game button ── */
 .btn-end {

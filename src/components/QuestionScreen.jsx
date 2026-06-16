@@ -8,15 +8,16 @@ const ADD_TIME = 15;
 
 export default function QuestionScreen({
   players,
-  category,
+  categories,
   resumeState,   // { currentPlayerIdx, log, usedIndices } | null
   onEndGame,
   onSwitchTopic,
 }) {
   const initFromResume = resumeState != null;
 
+  // usedIndices keyed per category id: { [categoryId]: number[] }
   const [usedIndices, setUsedIndices] = useState(
-    initFromResume ? resumeState.usedIndices : []
+    initFromResume ? resumeState.usedIndices : {}
   );
   const [log, setLog] = useState(
     initFromResume ? resumeState.log : []
@@ -26,6 +27,7 @@ export default function QuestionScreen({
   );
 
   const [current, setCurrent] = useState(null);
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const [playerTimes, setPlayerTimes] = useState({});
 
   const [timeLeft, setTimeLeft] = useState(DEFAULT_DURATION);
@@ -35,12 +37,23 @@ export default function QuestionScreen({
   const turnStartTimeRef = useRef(null);
   const elapsedBeforeAddRef = useRef(0);
   const maxTimeRef = useRef(DEFAULT_DURATION);
+  const catRoundRobinRef = useRef(0);
 
-  function loadQuestion(indices, playerIdx) {
-    const result = getRandomQuestion(category.id, indices);
+  function loadQuestion(indicesByCat, playerIdx) {
+    const catIdx = catRoundRobinRef.current % categories.length;
+    const cat = categories[catIdx];
+    catRoundRobinRef.current += 1;
+
+    const result = getRandomQuestion(cat.id, indicesByCat[cat.id] ?? []);
     if (!result) return;
     setCurrent(result);
-    if (result.index !== -1) setUsedIndices((prev) => [...prev, result.index]);
+    setCurrentCategory(cat);
+    if (result.index !== -1) {
+      setUsedIndices((prev) => ({
+        ...prev,
+        [cat.id]: [...(prev[cat.id] ?? []), result.index],
+      }));
+    }
     setPlayerTimes({});
     setTimeLeft(DEFAULT_DURATION);
     setPaused(false);
@@ -53,7 +66,7 @@ export default function QuestionScreen({
 
   useEffect(() => {
     loadQuestion(
-      initFromResume ? resumeState.usedIndices : [],
+      initFromResume ? resumeState.usedIndices : {},
       currentPlayerIdx
     );
   }, []);
@@ -129,8 +142,8 @@ export default function QuestionScreen({
     <div className="question-screen">
       <div className="qs-header">
         <span className="cat-badge">
-          <span className="cat-badge-emoji">{category.emoji}</span>
-          <span className="cat-badge-label">{category.label}</span>
+          <span className="cat-badge-emoji">{currentCategory.emoji}</span>
+          <span className="cat-badge-label">{currentCategory.label}</span>
         </span>
         <button className="btn-end" onClick={handleEndGame}>End game</button>
       </div>

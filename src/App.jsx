@@ -17,7 +17,7 @@ export default function App() {
     VALID_PATHS.includes(path) ? "setup" : "404"
   );
   const [players, setPlayers] = useState([]);
-  const [category, setCategory] = useState(null);
+  const [categories, setCategories] = useState([]);
   // resumeState: { currentPlayerIdx, log, usedIndices } — persisted across end/resume
   const [resumeState, setResumeState] = useState(null);
   const [endedState, setEndedState] = useState(null); // last game state for results
@@ -28,8 +28,8 @@ export default function App() {
     setScreen("topic");
   }
 
-  function handleTopicPick(cat) {
-    setCategory(cat);
+  function handleTopicPick(cats) {
+    setCategories(cats);
     setScreen("brewing");
   }
 
@@ -67,9 +67,9 @@ export default function App() {
       )}
       {screen === "game" && (
         <QuestionScreen
-          key={`${category?.id}-${resumeState?.currentPlayerIdx ?? 0}-${Date.now()}`}
+          key={`${categories.map((c) => c.id).join("-")}-${resumeState?.currentPlayerIdx ?? 0}-${Date.now()}`}
           players={players}
-          category={category}
+          categories={categories}
           resumeState={resumeState}
           onEndGame={handleEndGame}
           onSwitchTopic={handleSwitchTopic}
