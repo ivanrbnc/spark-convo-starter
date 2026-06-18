@@ -67,11 +67,14 @@ export const questions = {
     { en: "What does it mean to truly choose someone every day?", id: "Apa artinya benar-benar memilih seseorang setiap harinya?" },
     { en: "People settle more than they admit — what makes someone 'settle'?", id: "Orang lebih sering menerima apa adanya daripada yang mereka akui — apa yang membuat seseorang 'nrimo'?" },
     { en: "What's one thing you wish people were more honest about when it comes to love?", id: "Satu hal apa yang kamu harap orang lebih jujur soal cinta?" },
-    { en: "If your relationship had a theme song right now, what would it be?", id: "Jika hubunganmu punya lagu tema sekarang, lagu apa itu?" },
-    { en: "What fictional couple best represents your idea of relationship goals — and why?", id: "Pasangan fiksi mana yang paling mewakili relationship goals-mu — dan kenapa?" },
     { en: "Would you rather know exactly how a relationship ends before it starts?", id: "Lebih pilih tahu persis bagaimana hubungan berakhir sebelum dimulai?" },
     { en: "What's the pettiest reason you've ever ended or almost ended a relationship?", id: "Alasan paling sepele apa yang pernah kamu pakai untuk mengakhiri atau hampir mengakhiri hubungan?" },
-    { en: "Is matching energy the most important thing in a relationship?", id: "Apakah menyamakan energi adalah hal terpenting dalam hubungan?" },
+    { en: "What's a relationship habit you had that felt normal at the time but now seems like a red flag?", id: "Apa kebiasaan dalam hubungan yang dulu terasa normal tapi kini terlihat seperti tanda bahaya?" },
+    { en: "If someone watched your relationship from the outside, what would they say is your biggest blind spot?", id: "Jika seseorang mengamati hubunganmu dari luar, apa yang akan mereka katakan sebagai titik buta terbesarmu?" },
+    { en: "What's the version of 'forever' that you actually believe in — if you believe in it at all?", id: "Seperti apa versi 'selamanya' yang benar-benar kamu percaya — jika kamu mempercayainya?" },
+    { en: "At what point does someone stop being a partner and start being a roommate?", id: "Pada titik mana seseorang berhenti menjadi pasangan dan mulai menjadi teman sekamar?" },
+    { en: "What does 'I love you' actually mean to you — and when does it stop being enough?", id: "Apa arti 'aku mencintaimu' bagimu sebenarnya — dan kapan itu tidak lagi cukup?" },
+    { en: "Is it possible to fully trust someone after they've broken your trust once?", id: "Apakah mungkin sepenuhnya mempercayai seseorang setelah mereka merusak kepercayaanmu sekali?" },
   ],
 
   friends: [
@@ -121,6 +124,12 @@ export const questions = {
     { en: "What's the most ridiculous argument you've ever had with a friend?", id: "Pertengkaran paling konyol apa yang pernah kamu miliki dengan teman?" },
     { en: "Would you rather know every secret your friends have about you — or never know any?", id: "Lebih pilih tahu semua rahasia temanmu tentangmu — atau tidak tahu sama sekali?" },
     { en: "What's a friendship rule you think everyone should have?", id: "Apa aturan persahabatan yang menurutmu semua orang harus punya?" },
+    { en: "What's a friendship you let drift that you still think about — and what stopped you from fighting for it?", id: "Persahabatan apa yang kamu biarkan menjauh yang masih kamu pikirkan — dan apa yang menghentikanmu dari memperjuangkannya?" },
+    { en: "Is there a version of you that only exists around a specific friend — and is that person more or less you?", id: "Apakah ada versi dirimu yang hanya ada di sekitar teman tertentu — dan apakah orang itu lebih atau kurang jadi dirimu?" },
+    { en: "What's something a friend did that changed how you see yourself — for better or worse?", id: "Apa yang dilakukan teman yang mengubah cara kamu melihat dirimu — untuk lebih baik atau lebih buruk?" },
+    { en: "Have you ever ended a friendship and later realized you were the problem?", id: "Pernahkah kamu mengakhiri persahabatan dan kemudian menyadari bahwa kamu yang bermasalah?" },
+    { en: "What's the difference between a friend who shows up and one who just says they will?", id: "Apa bedanya teman yang benar-benar hadir dan yang hanya berkata akan hadir?" },
+    { en: "How much of your social life is built around people you actually chose versus people you fell into?", id: "Seberapa banyak kehidupan sosialmu dibangun di sekitar orang yang benar-benar kamu pilih versus yang kamu kebetulan kenal?" },
   ],
 
   family: [
@@ -169,6 +178,12 @@ export const questions = {
     { en: "Should family always come first — or is that a harmful expectation?", id: "Haruskah keluarga selalu diutamakan — atau itu ekspektasi yang berbahaya?" },
     { en: "What's something you want to carry forward from your family, and something you want to leave behind?", id: "Apa yang ingin kamu bawa dari keluargamu, dan apa yang ingin kamu tinggalkan?" },
     { en: "At what point does 'family first' stop being a value and start being an excuse?", id: "Pada titik apa 'keluarga dulu' berhenti jadi nilai dan mulai jadi alasan?" },
+    { en: "What's a fight your family had that never got resolved — and does it still affect things now?", id: "Pertengkaran apa dalam keluargamu yang tidak pernah terselesaikan — dan apakah masih berpengaruh sekarang?" },
+    { en: "Is there a version of you that only exists at home with your family — and do you like that version?", id: "Apakah ada versi dirimu yang hanya ada saat di rumah bersama keluarga — dan apakah kamu menyukai versi itu?" },
+    { en: "What would have to be true for you to completely cut off a family member — and has it ever gotten close?", id: "Apa yang harus terjadi agar kamu benar-benar memutus hubungan dengan anggota keluarga — dan sudahkah pernah hampir?" },
+    { en: "What's something your parents got genuinely right that you didn't appreciate until you were older?", id: "Apa yang orang tuamu benar-benar lakukan dengan benar yang tidak kamu hargai sampai kamu dewasa?" },
+    { en: "How much of your personality is just a reaction to how you were raised — not who you actually are?", id: "Seberapa banyak kepribadianmu hanyalah reaksi terhadap cara kamu dibesarkan — bukan siapa kamu sebenarnya?" },
+    { en: "What's a family belief you held onto way longer than you should have?", id: "Keyakinan keluarga apa yang kamu pegang jauh lebih lama dari seharusnya?" },
   ],
 
   work: [
@@ -216,6 +231,12 @@ export const questions = {
     { en: "What's the difference between being good at something and loving it?", id: "Apa bedanya mahir dalam sesuatu dan mencintainya?" },
     { en: "Rest is productive. Most people don't believe that even when they say they do.", id: "Istirahat itu produktif. Kebanyakan orang tidak percaya itu meski mereka bilang percaya." },
     { en: "If you could change one thing about the culture around work and careers, what would it be?", id: "Jika bisa mengubah satu hal tentang budaya kerja dan karier, apa itu?" },
+    { en: "What's a job you'd take for half the salary — and what does that say about what you actually value?", id: "Pekerjaan apa yang akan kamu ambil dengan setengah gaji — dan apa artinya tentang apa yang benar-benar kamu hargai?" },
+    { en: "Have you ever realized you were only good at something because you were scared to stop?", id: "Pernahkah kamu menyadari bahwa kamu hanya bagus dalam sesuatu karena takut untuk berhenti?" },
+    { en: "What's a version of success you chased that, once you got close, didn't feel like anything?", id: "Apa versi kesuksesan yang kamu kejar yang, setelah hampir tercapai, tidak terasa seperti apa-apa?" },
+    { en: "What would you do with your time if money were completely off the table — and why aren't you doing any of it?", id: "Apa yang akan kamu lakukan dengan waktumu jika uang tidak jadi pertimbangan — dan kenapa kamu tidak melakukan apapun dari itu?" },
+    { en: "Is there a version of yourself from 5 years ago that would be disappointed in the career choices you've made?", id: "Apakah ada versi dirimu 5 tahun lalu yang akan kecewa dengan pilihan karier yang sudah kamu buat?" },
+    { en: "What's a skill gap you have that you keep avoiding because fixing it would require admitting you were wrong?", id: "Apa celah keahlian yang kamu miliki yang terus kamu hindari karena memperbaikinya berarti mengakui kamu salah?" },
   ],
 
   dreams: [
@@ -264,6 +285,12 @@ export const questions = {
     { en: "What does 'enough' look like — when would you feel like you've truly arrived?", id: "Seperti apa rasanya 'cukup' — kapan kamu merasa benar-benar sampai?" },
     { en: "The person you want to become — are you closer to them or further away than a year ago?", id: "Orang yang ingin kamu jadi — apakah kamu lebih dekat atau lebih jauh darinya dibanding setahun lalu?" },
     { en: "Is it possible to be genuinely content while also wanting more?", id: "Apakah mungkin benar-benar puas sekaligus masih menginginkan lebih?" },
+    { en: "What's the thing you want most that you're most afraid to say out loud — and why does saying it feel dangerous?", id: "Apa yang paling kamu inginkan yang paling takut kamu ucapkan keras-keras — dan kenapa mengatakannya terasa berbahaya?" },
+    { en: "What would your life look like if you made one decision differently 5 years ago?", id: "Seperti apa hidupmu jika kamu membuat satu keputusan berbeda 5 tahun lalu?" },
+    { en: "What's something you keep calling a 'someday' goal that you suspect you'll never actually pursue?", id: "Apa yang terus kamu sebut tujuan 'suatu hari nanti' yang kamu duga tidak akan pernah benar-benar kamu kejar?" },
+    { en: "Is the life you're building actually the one you want, or the one you think you should want?", id: "Apakah kehidupan yang sedang kamu bangun benar-benar yang kamu inginkan, atau yang kamu pikir seharusnya kamu inginkan?" },
+    { en: "What's a dream you gave up on — and do you think you made the right call?", id: "Apa mimpi yang sudah kamu lepaskan — dan apakah kamu pikir kamu membuat keputusan yang tepat?" },
+    { en: "If you had to bet on one thing you'll regret most at 70, what would it be?", id: "Jika harus bertaruh pada satu hal yang paling kamu sesali di usia 70, apa itu?" },
   ],
 
   fun: [
@@ -319,6 +346,13 @@ export const questions = {
     { en: "What's the nicest thing a stranger has ever done for you out of nowhere?", id: "Hal paling baik apa yang pernah dilakukan orang asing padamu tanpa alasan?" },
     { en: "What's a small thing that makes your day, every single time?", id: "Hal kecil apa yang selalu membuatmu senang, setiap kali?" },
     { en: "What's the last thing that genuinely surprised you — in a good way?", id: "Hal terakhir apa yang benar-benar mengejutkanmu — dengan cara yang baik?" },
+    { en: "If you could only keep one social media platform and had to delete the rest forever, which one survives and why?", id: "Jika hanya bisa mempertahankan satu platform media sosial dan harus menghapus sisanya selamanya, mana yang bertahan dan kenapa?" },
+    { en: "What's a fictional villain whose logic you secretly understand a little too well?", id: "Penjahat fiksi mana yang logikanya diam-diam kamu pahami terlalu baik?" },
+    { en: "If your group had to survive a game show where one person gets voted off every round, who goes first and why?", id: "Jika kelompokmu harus bertahan di game show di mana satu orang dipilih keluar setiap ronde, siapa yang pergi pertama dan kenapa?" },
+    { en: "What's something completely free that makes you happier than most expensive things?", id: "Apa yang sepenuhnya gratis yang membuatmu lebih bahagia dari kebanyakan hal yang mahal?" },
+    { en: "If you had to describe yourself using only a food and a weather condition, what are you?", id: "Jika harus menggambarkan dirimu hanya menggunakan makanan dan kondisi cuaca, apa kamu?" },
+    { en: "What's a rule you have for yourself that sounds ridiculous until you explain it?", id: "Apa aturan yang kamu miliki untuk dirimu sendiri yang terdengar konyol sampai kamu jelaskan?" },
+    { en: "What's the most unhinged plan you've ever seriously considered?", id: "Apa rencana paling gila yang pernah benar-benar kamu pertimbangkan?" },
   ],
 
   intimacy: [
@@ -362,6 +396,13 @@ export const questions = {
     { en: "Is flirting a skill you're born with or one you can learn?", id: "Apakah flirting adalah keahlian yang kamu bawa lahir atau yang bisa dipelajari?" },
     { en: "What's the boldest move you've ever made to pursue someone?", id: "Gerakan paling berani apa yang pernah kamu lakukan untuk mengejar seseorang?" },
     { en: "Is it possible to fully separate sex from emotional attachment?", id: "Apakah mungkin sepenuhnya memisahkan seks dari keterikatan emosional?" },
+    { en: "What's something about attraction that you'd never admit to someone you were actually attracted to?", id: "Apa tentang ketertarikan yang tidak akan pernah kamu akui kepada seseorang yang benar-benar kamu tertarik?" },
+    { en: "At what point does playing hard to get become genuinely harmful to both people?", id: "Pada titik mana berpura-pura tidak tertarik menjadi benar-benar merugikan kedua orang?" },
+    { en: "What's the moment you realized attraction alone wasn't enough — and what shifted?", id: "Apa momen ketika kamu menyadari ketertarikan saja tidak cukup — dan apa yang berubah?" },
+    { en: "Is it possible to be attracted to someone and simultaneously know they're wrong for you?", id: "Apakah mungkin tertarik pada seseorang sekaligus tahu mereka salah untukmu?" },
+    { en: "What's an unspoken rule about intimacy that you think needs to be said out loud more?", id: "Apa aturan tak terucap tentang keintiman yang menurutmu perlu lebih sering diucapkan?" },
+    { en: "Can intimacy exist without vulnerability, or is vulnerability the whole point?", id: "Bisakah keintiman ada tanpa kerentanan, atau kerentanan adalah inti dari segalanya?" },
+    { en: "What's the most honest thing you've ever said to someone you were into — and how did it land?", id: "Apa hal paling jujur yang pernah kamu katakan kepada seseorang yang kamu suka — dan bagaimana hasilnya?" },
   ],
 
   money: [
@@ -401,6 +442,12 @@ export const questions = {
     { en: "What's something people chase for status that has nothing to do with actual wealth?", id: "Apa yang orang kejar demi status yang tidak ada hubungannya dengan kekayaan nyata?" },
     { en: "Is it healthier to plan obsessively for the future or live more for today?", id: "Lebih sehat merencanakan masa depan secara obsesif atau lebih hidup untuk hari ini?" },
     { en: "Do you think your relationship with money will ever feel 'settled,' or is it always evolving?", id: "Menurutmu, apakah hubunganmu dengan uang akan pernah terasa 'settled', atau selalu berkembang?" },
+    { en: "What's a financial decision you made that felt responsible but was actually just fear?", id: "Apa keputusan finansial yang kamu buat yang terasa bertanggung jawab tapi sebenarnya hanya ketakutan?" },
+    { en: "If someone gave you a million dollars tomorrow with no strings attached, what's the first thing you change — and what does that say about you?", id: "Jika seseorang memberimu satu juta dolar besok tanpa syarat apapun, apa yang pertama kamu ubah — dan apa artinya tentang dirimu?" },
+    { en: "What's the most money you've ever spent on something that had nothing to do with practicality — and do you regret it?", id: "Berapa banyak uang yang pernah kamu habiskan untuk sesuatu yang sama sekali tidak praktis — dan apakah kamu menyesal?" },
+    { en: "What's a money belief you inherited from your family that's quietly limited you?", id: "Keyakinan tentang uang apa yang kamu warisi dari keluarga yang diam-diam membatasimu?" },
+    { en: "Is there an amount of money that would actually buy you peace of mind — or is it never really about the number?", id: "Apakah ada jumlah uang yang benar-benar bisa membeli ketenangan pikiranmu — atau tidak pernah benar-benar soal angkanya?" },
+    { en: "What's something you justify spending on that you know deep down is mostly ego?", id: "Apa yang kamu justifikasi untuk dihabiskan yang jauh di lubuk hatimu tahu sebagian besar soal ego?" },
   ],
 
   beliefs: [
@@ -441,6 +488,12 @@ export const questions = {
     { en: "Do you think people are fundamentally good, fundamentally selfish, or just shaped by circumstance?", id: "Menurutmu, apakah orang pada dasarnya baik, pada dasarnya egois, atau hanya dibentuk oleh keadaan?" },
     { en: "What would have to happen for you to completely change your worldview?", id: "Apa yang harus terjadi agar kamu benar-benar mengubah pandangan duniamu?" },
     { en: "What's something you used to believe with certainty that you now find embarrassing?", id: "Apa yang dulu kamu yakini dengan pasti yang kini membuatmu malu?" },
+    { en: "What's a moral line you have that you're not fully sure you'd hold if the stakes were high enough?", id: "Apa garis moral yang kamu miliki yang tidak sepenuhnya yakin akan kamu pertahankan jika taruhannya cukup tinggi?" },
+    { en: "Is there a version of lying that you think society has simply agreed to call something else?", id: "Apakah ada versi kebohongan yang menurut kamu sudah masyarakat sepakati untuk disebut dengan nama lain?" },
+    { en: "What would it take for you to do something you currently consider wrong — or is there no price?", id: "Apa yang diperlukan agar kamu melakukan sesuatu yang saat ini kamu anggap salah — atau tidak ada harganya?" },
+    { en: "Is there a belief you hold more out of identity than actual conviction?", id: "Apakah ada keyakinan yang lebih kamu pegang karena identitas daripada keyakinan nyata?" },
+    { en: "What's something that used to feel wrong to you that you've quietly made peace with?", id: "Apa yang dulu terasa salah bagimu yang diam-diam sudah kamu damaikan?" },
+    { en: "Do you think the way you judge others is the same standard you apply to yourself — honestly?", id: "Apakah menurutmu cara kamu menilai orang lain adalah standar yang sama yang kamu terapkan pada dirimu sendiri — jujur?" },
   ],
 
   identity: [
@@ -475,6 +528,12 @@ export const questions = {
     { en: "What's something about modern society that makes people feel more isolated than connected?", id: "Apa tentang masyarakat modern yang membuat orang merasa lebih terisolasi daripada terhubung?" },
     { en: "What's something you've had to unlearn about how you see people different from you?", id: "Apa yang harus kamu hilangkan tentang cara kamu melihat orang yang berbeda darimu?" },
     { en: "Is it possible to fully understand someone else's experience, or only get close to it?", id: "Apakah mungkin sepenuhnya memahami pengalaman orang lain, atau hanya mendekatinya?" },
+    { en: "What's an identity label you used to use for yourself that no longer fits — and when did it stop fitting?", id: "Apa label identitas yang dulu kamu gunakan untuk dirimu yang tidak lagi cocok — dan kapan itu berhenti cocok?" },
+    { en: "What part of who you are do you think people would be most surprised by if they actually knew?", id: "Bagian dari dirimu yang mana yang menurutmu paling akan mengejutkan orang jika mereka benar-benar tahu?" },
+    { en: "Is there a version of you that you've outgrown but still perform around certain people?", id: "Apakah ada versi dirimu yang sudah kamu lampaui tapi masih kamu tampilkan di sekitar orang tertentu?" },
+    { en: "What's something about your background that quietly shapes how you move through the world?", id: "Apa tentang latar belakangmu yang diam-diam membentuk cara kamu bergerak di dunia?" },
+    { en: "Do you think who you are is fundamentally fixed, or are you still becoming someone?", id: "Apakah menurutmu siapa kamu itu pada dasarnya tetap, atau kamu masih menjadi seseorang?" },
+    { en: "What would you do differently if you didn't care at all what people from your past thought of you?", id: "Apa yang akan kamu lakukan berbeda jika kamu sama sekali tidak peduli apa yang dipikirkan orang dari masa lalumu?" },
   ],
 
   health: [
@@ -508,6 +567,12 @@ export const questions = {
     { en: "What's a small daily habit that's made the biggest difference in how you feel?", id: "Kebiasaan harian kecil apa yang membuat perbedaan terbesar dalam perasaanmu?" },
     { en: "Is chronic stress treated seriously enough as a health issue?", id: "Apakah stres kronis cukup serius diperlakukan sebagai masalah kesehatan?" },
     { en: "What's something about your own health journey you're quietly proud of?", id: "Apa tentang perjalanan kesehatanmu yang diam-diam kamu banggakan?" },
+    { en: "What's a body image belief you were handed that you've had to consciously undo?", id: "Keyakinan tentang citra tubuh apa yang pernah diberikan padamu yang harus kamu sadari dan batalkan?" },
+    { en: "Is there a way you treat your body that you know is a form of self-punishment, even if it looks like self-care?", id: "Apakah ada cara kamu memperlakukan tubuhmu yang kamu tahu adalah bentuk hukuman diri, meski terlihat seperti perawatan diri?" },
+    { en: "What's the healthiest you've ever felt — and what was actually different about that time?", id: "Kapan kamu pernah merasa paling sehat — dan apa yang benar-benar berbeda pada waktu itu?" },
+    { en: "What's a mental health pattern you have that you only recognized because someone else pointed it out?", id: "Apa pola kesehatan mental yang kamu miliki yang hanya kamu sadari karena orang lain menunjukkannya?" },
+    { en: "Do you think your physical health and your emotional state are more connected than you usually admit?", id: "Apakah menurutmu kesehatan fisik dan keadaan emosionalmu lebih terhubung dari yang biasanya kamu akui?" },
+    { en: "What's something you keep telling yourself you'll deal with later about your health that you probably shouldn't?", id: "Apa yang terus kamu katakan akan ditangani nanti tentang kesehatanmu yang mungkin tidak seharusnya?" },
   ],
 
   popculture: [
@@ -544,6 +609,12 @@ export const questions = {
     { en: "Celebrity culture says more about us than it does about the celebrities.", id: "Budaya selebriti lebih banyak bicara tentang kita daripada tentang para selebritis itu sendiri." },
     { en: "Is meme culture actually a sharp form of commentary, or just noise?", id: "Apakah budaya meme sebenarnya bentuk komentar yang tajam, atau sekadar kebisingan?" },
     { en: "Do you think people will look back on this era of culture fondly, or be embarrassed by it?", id: "Menurutmu, apakah orang akan mengenang era budaya ini dengan hangat, atau merasa malu karenanya?" },
+    { en: "What's a piece of media that changed your opinion on something you thought you'd never budge on?", id: "Karya media apa yang mengubah pendapatmu tentang sesuatu yang kamu pikir tidak akan pernah berubah?" },
+    { en: "If the algorithm perfectly reflected who you actually are, what would it show you — and are you okay with that?", id: "Jika algoritma merefleksikan siapa kamu sebenarnya, apa yang akan ditampilkannya — dan apakah kamu nyaman dengan itu?" },
+    { en: "What's a popular opinion about pop culture that you think people only hold because everyone else does?", id: "Apa pendapat populer tentang budaya pop yang menurutmu hanya dipegang orang karena semua orang juga berpendapat begitu?" },
+    { en: "Is there a creator or artist you stopped following not because of what they made, but because of their audience?", id: "Apakah ada kreator atau seniman yang berhenti kamu ikuti bukan karena karya mereka, tapi karena penontonnya?" },
+    { en: "What's the most parasocial relationship you've ever had — and did it actually fill something real?", id: "Apa hubungan parasosial terbesar yang pernah kamu miliki — dan apakah itu benar-benar mengisi sesuatu yang nyata?" },
+    { en: "What's something you post online that's different from how you actually are — and why?", id: "Apa yang kamu posting online yang berbeda dari dirimu yang sebenarnya — dan kenapa?" },
   ],
 
   parenting: [
@@ -580,6 +651,12 @@ export const questions = {
     { en: "What's something a parent did for you that you didn't appreciate until much later?", id: "Apa yang dilakukan orang tuamu untukmu yang tidak kamu hargai sampai jauh kemudian?" },
     { en: "Should grandparents have a say in how kids are raised?", id: "Haruskah kakek-nenek punya suara dalam cara anak-anak dibesarkan?" },
     { en: "What's the one thing you think every kid deserves, regardless of how their family is structured?", id: "Satu hal apa yang menurutmu setiap anak berhak dapatkan, terlepas dari struktur keluarganya?" },
+    { en: "What's something you'd do completely differently as a parent compared to how you were raised — and is it because your parents were wrong, or just different?", id: "Apa yang akan kamu lakukan berbeda sebagai orang tua dibanding cara kamu dibesarkan — dan apakah itu karena orang tuamu salah, atau hanya berbeda?" },
+    { en: "What's the hardest conversation you think a parent has to have with their kid — and at what age?", id: "Apa percakapan tersulit yang menurutmu harus dilakukan orang tua dengan anaknya — dan pada usia berapa?" },
+    { en: "Is it possible to raise a child without projecting your own unresolved issues onto them?", id: "Apakah mungkin membesarkan anak tanpa memproyeksikan masalahmu yang belum terselesaikan kepada mereka?" },
+    { en: "What would you want your kid to say about how you raised them — and do you think you're on track for that?", id: "Apa yang kamu inginkan anakmu katakan tentang cara kamu membesarkan mereka — dan apakah kamu pikir kamu sudah menuju ke sana?" },
+    { en: "What's a parenting instinct you have that you genuinely don't know if it's wisdom or just your own baggage?", id: "Apa naluri pengasuhan yang kamu miliki yang benar-benar tidak kamu tahu apakah itu kebijaksanaan atau hanya beban pribadimu?" },
+    { en: "Do you think it's possible to raise kids who are genuinely happier than you were — and what would that actually require?", id: "Apakah menurutmu mungkin membesarkan anak yang benar-benar lebih bahagia dari kamu — dan apa yang sebenarnya diperlukan untuk itu?" },
   ],
 
   politics: [
@@ -618,6 +695,12 @@ export const questions = {
     { en: "Do you think your political views are mostly inherited, or did you genuinely arrive at them yourself?", id: "Menurutmu, apakah pandangan politikmu sebagian besar diwarisi, atau kamu benar-benar sampai padanya sendiri?" },
     { en: "Is it civic responsibility or personal choice whether someone engages with politics at all?", id: "Apakah tanggung jawab sipil atau pilihan pribadi apakah seseorang terlibat dalam politik sama sekali?" },
     { en: "What's something you wish more people understood about why you believe what you believe?", id: "Apa yang kamu harap lebih banyak orang pahami tentang mengapa kamu percaya apa yang kamu percaya?" },
+    { en: "What's a political opinion you've changed your mind on — and what actually changed it?", id: "Apa pendapat politik yang kamu ubah — dan apa yang benar-benar mengubahnya?" },
+    { en: "Is there a conflict happening right now that you think people aren't taking seriously enough — and why?", id: "Apakah ada konflik yang sedang terjadi sekarang yang menurutmu tidak cukup serius ditanggapi orang — dan kenapa?" },
+    { en: "What's something about how your country handles power that you think is normalized but actually isn't okay?", id: "Apa tentang cara negaramu menangani kekuasaan yang menurutmu dinormalisasi tapi sebenarnya tidak baik-baik saja?" },
+    { en: "Is there a leader from history — any country, any era — who you think got it genuinely right? What did they do differently?", id: "Apakah ada pemimpin dari sejarah — negara manapun, era manapun — yang menurutmu benar-benar tepat? Apa yang mereka lakukan berbeda?" },
+    { en: "What's something you think would have to collapse before real political change could happen?", id: "Apa yang menurutmu harus runtuh sebelum perubahan politik yang nyata bisa terjadi?" },
+    { en: "Do you think future generations will judge our era more harshly for what we did or what we didn't do?", id: "Apakah menurutmu generasi mendatang akan menilai era kita lebih keras karena apa yang kita lakukan atau apa yang tidak kita lakukan?" },
   ],
 };
 
