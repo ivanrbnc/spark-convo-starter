@@ -8,14 +8,16 @@ Spark is a multiplayer conversation starter app built for real talk — deep que
 
 ## Features
 
-- **6 topic categories** — Relationship, Friends, Family, Work & Career, Dreams & Goals, Just for Fun
-- **2–10 players** with custom names
-- **Per-player turn timer** — 30s default, pauseable, +15s extendable
+- **14 topic categories** — Relationship, Friends, Family, Work & Career, Dreams & Goals, Just for Fun, Intimacy, Money, Beliefs, Identity, Health, Pop Culture, Parenting, Politics
+- **Bilingual** — toggle between English and Indonesian mid-game
+- **1–10 players** with custom names
+- **Two game modes** — Competitive (countdown timer) and Casual (count-up)
+- **Per-player turn timer** — 3-minute default, pauseable, +15s extendable
 - **Time tracking per question** — records exactly how long each player talked
 - **Results screen** with per-question pie charts showing talk-time distribution
 - **Resume or switch topic** after ending a game — no need to re-enter names
 - **Brewing animation** between questions
-- **400+ prompts** — questions, statements, and hot takes designed to spark real conversation
+- **645+ prompts** — questions and opinion prompts designed to spark real, perspective-creating conversation
 - **8-bit retro UI** inspired by [8bitcn](https://www.8bitcn.com)
 - **Mobile-friendly** — works on any screen size
 
@@ -54,15 +56,16 @@ npm run preview
 
 ## How to Play
 
-1. **Enter player count** — pick 2–5 or type a custom number (max 10)
+1. **Enter player count** — pick 1–5 or type a custom number (max 10)
 2. **Enter names** — give each player a name (or leave as Player 1, 2…)
-3. **Pick a topic** — choose from 6 categories
-4. **Take turns** — each player gets 30 seconds to respond to the prompt
+3. **Pick a mode** — Competitive (timer counts down) or Casual (timer counts up)
+4. **Pick a topic** — choose from 14 categories
+5. **Take turns** — each player responds to the prompt
    - Hit **Done** when your turn is finished to pass to the next player
    - Use **+15** to add more time, or **II** to pause
-5. **End game** anytime — hit the red **End game** button
-6. **See results** — view a pie chart for every question showing who talked the longest
-7. **Resume or switch** — continue where you left off or pick a new topic
+6. **End game** anytime — hit the red **End game** button
+7. **See results** — view a pie chart for every question showing who talked the longest
+8. **Resume or switch** — continue where you left off or pick a new topic
 
 ---
 
@@ -72,13 +75,14 @@ npm run preview
 src/
 ├── components/
 │   ├── PlayerSetup.jsx      # Player count + name entry screen
+│   ├── ModeScreen.jsx       # Competitive vs Casual mode picker
 │   ├── TopicScreen.jsx      # Category picker
 │   ├── QuestionScreen.jsx   # Game screen with timer + turn tracking
 │   ├── ResultsScreen.jsx    # End screen with pie charts
 │   ├── BrewingScreen.jsx    # Loading animation between questions
 │   └── NotFoundScreen.jsx   # 404 page
 ├── data/
-│   └── questions.js         # 400+ prompts across 6 categories
+│   └── questions.js         # 645+ prompts across 14 categories (bilingual EN/ID)
 ├── App.jsx                  # Screen router + global state
 └── App.css                  # All styles
 public/
