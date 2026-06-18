@@ -1,6 +1,6 @@
 # ⚡ Spark
 
-> **Spark your conversation!**
+> **Ignite your conversation!**
 
 Spark is a multiplayer conversation starter app built for real talk — deep questions, hot takes, and opinion prompts that get people debating, laughing, and actually connecting. Pick a topic, set your players, and let Spark do the rest.
 

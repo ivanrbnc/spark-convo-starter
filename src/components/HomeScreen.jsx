@@ -5,7 +5,7 @@ export default function HomeScreen({ onStart }) {
     <div className="home-screen">
       <div className="hero">
         <h1 className="app-title">Spark</h1>
-        <p className="app-tagline">Spark your conversation!</p>
+        <p className="app-tagline">Ignite your conversation!</p>
       </div>
 
       <p className="pick-label">Choose a topic</p>

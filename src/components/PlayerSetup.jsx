@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const PRESETS = [2, 3, 4, 5];
+const PRESETS = [1, 2, 3, 4, 5];
 const MAX_PLAYERS = 10;
 
 export default function PlayerSetup({ onStart }) {
-  const [count, setCount] = useState(2);
+  const [count, setCount] = useState(1);
   const [custom, setCustom] = useState("");
   const [useCustom, setUseCustom] = useState(false);
-  const [names, setNames] = useState(["", ""]);
+  const [names, setNames] = useState([""]);
 
   const activeCount = useCustom ? names.length : count;
 
@@ -25,7 +25,7 @@ export default function PlayerSetup({ onStart }) {
   function handleCustomChange(val) {
     setCustom(val);
     const n = parseInt(val);
-    if (!isNaN(n) && n >= 2) {
+    if (!isNaN(n) && n >= 1) {
       resizeNames(Math.min(n, MAX_PLAYERS));
     }
   }
@@ -35,7 +35,7 @@ export default function PlayerSetup({ onStart }) {
   }
 
   function handleCustomBlur() {
-    const n = Math.max(2, Math.min(MAX_PLAYERS, parseInt(custom) || 2));
+    const n = Math.max(1, Math.min(MAX_PLAYERS, parseInt(custom) || 1));
     setCustom(String(n));
     resizeNames(n);
   }
@@ -56,7 +56,7 @@ export default function PlayerSetup({ onStart }) {
     <div className="setup-screen">
       <div className="hero">
         <h1 className="app-title">Spark</h1>
-        <p className="app-tagline">Spark your conversation!</p>
+        <p className="app-tagline">Ignite your conversation!</p>
       </div>
 
       <div className="setup-section">
@@ -74,7 +74,7 @@ export default function PlayerSetup({ onStart }) {
           <input
             className={`input-count${useCustom ? " active" : ""}`}
             type="number"
-            min="2"
+            min="1"
             max={MAX_PLAYERS}
             placeholder="?"
             value={custom}
@@ -105,7 +105,7 @@ export default function PlayerSetup({ onStart }) {
         </div>
       </div>
 
-      <button className="btn-primary" onClick={handleStart}>
+      <button className="btn-primary setup-name-btn" onClick={handleStart}>
         {names.slice(0, activeCount).every((n) => n.trim()) ? "Start" : "Skip"} &gt;
       </button>
     </div>
